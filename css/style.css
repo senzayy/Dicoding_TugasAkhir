@@ -193,6 +193,7 @@ footer {
   main aside {
     width: 50%;
     margin-bottom: 10px;
+    margin-top: 10px;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
@@ -205,6 +206,26 @@ footer {
   main article section img {
     width: auto;
     height: auto;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  main article {
+    width: 100%;
+  }
+  main article section img {
+    float: none;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  main aside {
+    width: 60%;
+    margin-bottom: 10px;
+    -webkit-transform: translateX(-30%);
+            transform: translateX(-30%);
   }
 }
 /*# sourceMappingURL=style.css.map */
