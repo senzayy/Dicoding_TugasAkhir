@@ -225,12 +225,13 @@ footer {
   }
 }
 
-@media screen and (max-width: 567px) {
+@media screen and (max-width: 625px) {
   header li {
     display: block;
     width: 90%;
     padding: 10px;
     margin-bottom: 5px;
+    text-align: center;
   }
   header li:active {
     background-color: #F98404;
