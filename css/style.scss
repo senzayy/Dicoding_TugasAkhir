@@ -21,13 +21,14 @@ header{
             font-weight: bolder;
         }
         p{
+            margin-top : 10px;
             font-size : 18px;
             opacity : 0.8;
             font-weight: bold;
         }
     }
     nav{
-        background-color: #f1bb5d;
+        background-color : transparent;
         height : 60px;
         width : 100%;
         display : flex;
@@ -36,6 +37,7 @@ header{
         z-index: 5;
         position: fixed;
         top : 0;
+        transition: all 0.5s;
     }
     li{
         display : inline;
@@ -127,6 +129,52 @@ footer{
     display : flex;
     justify-content: center;
     align-items: center;
-    background-color : lightblue;
-    color : white
+    background-color : rgba(106, 215, 252, 0.863);
+    color : white;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 900px){
+    .jumbo{
+        p{
+            text-align: center;
+        }
+    }
+    
+    main{
+        article{
+            width : 100%;
+            section{
+                img{
+                    width : auto;
+                    height : auto;
+                }
+            }
+        }
+
+        aside{
+            width : 50%;
+            margin-bottom : 10px;
+            transform: translateX(-50%);
+        }
+    }
+
+}
+
+@media screen and (max-width:800px){
+    main{
+        article{
+            width : 100%;
+            section{
+                img{
+                    width : auto;
+                    height : auto;
+                }
+            }
+        }
+}
+}
+
+@media screen and (max-width : 569px){
+    
 }
