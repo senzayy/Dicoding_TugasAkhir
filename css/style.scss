@@ -38,9 +38,15 @@ header{
         position: fixed;
         top : 0;
         transition: all 0.5s;
+        .dropdown{
+            display : none;
+        }
+        .dropcontent{
+            display : none;
+        }
     }
     li{
-        display : inline;
+        display : inline-block;
         margin-right : 15px;
         padding : 10px;
         font-size: 18px;
@@ -48,6 +54,12 @@ header{
         a{
             text-decoration: none;
             color : white;
+        }
+        &:hover{
+            font-size : 23px;
+        }
+        &:active{
+            background-color : #F98404;
         }
     }
 }
@@ -135,6 +147,7 @@ footer{
 }
 
 @media screen and (max-width: 900px){
+
     .jumbo{
         p{
             text-align: center;
@@ -177,6 +190,51 @@ footer{
 }
 
 @media screen and (max-width : 567px){
+
+    header{
+
+        li{
+            display : block;
+            width : 90%;
+            padding : 10px;
+            margin-bottom : 5px;
+        
+            &:active{
+                background-color : #F98404;
+            }
+        }
+
+        nav{
+            ul{
+                display : none;
+            }
+            .dropdown{
+                height : 60px;
+                width : 100%;
+                display : flex;
+                justify-content: center;
+                align-items: center;
+                #menu{
+                    background-color : rgba(241, 187, 93, 1);
+                    border: 1px solid white;
+                    color : white;
+                    font-weight: bolder;
+                    padding : 15px;
+                }
+            }
+            .dropcontent.tampil{
+                width : 100%;
+                background-color : rgba(241, 187, 93, 1);
+                display : flex;
+                flex-direction: column;
+                padding-top : 170px;
+                align-items: center;
+            }
+            .dropcontent.hilang{
+                display : none;
+            }
+        }
+    }
     main{
         article{
             width : 100%;

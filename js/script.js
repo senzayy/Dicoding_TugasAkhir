@@ -1,4 +1,7 @@
 const atas = document.querySelector('.stick');
+const btnDrop = document.getElementById('menu');
+const dropcontent = document.getElementById('dropcontent');
+const list_li = document.querySelectorAll('.dropcontent li');
 
 window.addEventListener('scroll', ()=>{
     let scrollPos = window.pageYOffset;
@@ -22,3 +25,18 @@ window.addEventListener('scroll', ()=>{
     atas.style.backgroundColor = 'rgb(241, 187, 93, 1)';
    }
 });
+
+btnDrop.addEventListener('click', ()=>{
+    if(dropcontent.classList.contains('hilang')){
+        dropcontent.classList.replace('hilang', 'tampil');
+    }
+    else{
+        dropcontent.classList.replace('tampil','hilang');
+    }
+});
+
+for(let list in list_li){
+    list_li[list].addEventListener('click', ()=>{
+        dropcontent.classList.replace('tampil','hilang');
+    });
+}
